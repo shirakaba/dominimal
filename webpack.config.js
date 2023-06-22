@@ -6,9 +6,13 @@ const path = require('path');
 const isProduction = process.env.NODE_ENV == 'production';
 const esbuildOptions = { target: 'es2021' };
 const config = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   target: 'node',
   output: {
+    library: {
+      type: 'commonjs',
+      export: 'default',
+    },
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'source-map',

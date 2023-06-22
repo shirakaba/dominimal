@@ -1,14 +1,19 @@
 {
   "name": "dominimal",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A minimal subset of jsdom, focusing on DOM (and omitting wider Web APIs).",
+  "types": "dist/main.d.ts",
   "main": "dist/main.js",
   "scripts": {
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
+    "postinstall": "husky install",
     "watch": "webpack --watch"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Jamie Birch",
   "license": "MIT",
   "devDependencies": {
@@ -17,7 +22,6 @@
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.3",
-    "postinstall-postinstall": "^2.1.0",
     "prettier": "^2.8.8",
     "webpack": "^5.87.0",
     "webpack-bundle-analyzer": "^4.9.0",
