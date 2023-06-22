@@ -38,7 +38,6 @@ const config = {
         'Headers.js',
         'HTMLAnchorElement.js',
         'HTMLAreaElement.js',
-        // 'HTMLAudioElement.js',
         'HTMLBaseElement.js',
         'HTMLBRElement.js',
         'HTMLButtonElement.js',
@@ -58,7 +57,6 @@ const config = {
         'HTMLHeadingElement.js',
         'HTMLHRElement.js',
         'HTMLIFrameElement.js',
-        // 'HTMLImageElement.js',
         'HTMLInputElement.js',
         'HTMLLabelElement.js',
         'HTMLLegendElement.js',
@@ -66,7 +64,6 @@ const config = {
         'HTMLLinkElement.js',
         'HTMLMapElement.js',
         'HTMLMarqueeElement.js',
-        // 'HTMLMediaElement.js',
         'HTMLMenuElement.js',
         'HTMLMeterElement.js',
         'HTMLModElement.js',
@@ -96,7 +93,6 @@ const config = {
         'HTMLTimeElement.js',
         'HTMLTrackElement.js',
         'HTMLUnknownElement.js',
-        'HTMLVideoElement.js',
         // 'MimeTypeArray.js',
         'RadioNodeList.js',
         'SVGAnimatedString.js',
@@ -116,7 +112,13 @@ const config = {
         return acc;
       }, {}),
       // Alias to the same subpath in dominimal
-      ...['lib/jsdom/living/fetch/Headers-impl.js'].reduce((acc, subpath) => {
+      ...[
+        'lib/jsdom/living/fetch/Headers-impl.js',
+        'lib/jsdom/living/generated/HTMLAudioElement.js',
+        'lib/jsdom/living/generated/HTMLImageElement.js',
+        'lib/jsdom/living/generated/HTMLMediaElement.js',
+        'lib/jsdom/living/generated/HTMLVideoElement.js',
+      ].reduce((acc, subpath) => {
         acc[getJsdomSubpath(subpath)] = path.resolve(__dirname, subpath);
         return acc;
       }, {}),
