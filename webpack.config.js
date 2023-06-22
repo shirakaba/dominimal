@@ -35,7 +35,7 @@ const config = {
       psl: false,
       saxes: false,
       ...[
-        'Headers.js', // TODO: use built-in
+        'Headers.js',
         'HTMLAnchorElement.js',
         'HTMLAreaElement.js',
         // 'HTMLAudioElement.js',
@@ -113,6 +113,11 @@ const config = {
       ].reduce((acc, file) => {
         acc[getJsdomSubpath(`lib/jsdom/living/generated/${file}`)] =
           path.resolve(__dirname, './lib/jsdom/living/generated/interface.js');
+        return acc;
+      }, {}),
+      // Alias to the same subpath in dominimal
+      ...['lib/jsdom/living/fetch/Headers-impl.js'].reduce((acc, subpath) => {
+        acc[getJsdomSubpath(subpath)] = path.resolve(__dirname, subpath);
         return acc;
       }, {}),
       // ...[
