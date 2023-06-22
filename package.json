@@ -8,11 +8,12 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development",
     "build:prod": "webpack --mode=production --node-env=production",
-    "postinstall": "husky install",
+    "prepare": "husky install",
     "watch": "webpack --watch"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE-jsdom"
   ],
   "author": "Jamie Birch",
   "license": "MIT",
