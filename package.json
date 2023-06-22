@@ -1,6 +1,6 @@
 {
   "name": "dominimal",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A minimal subset of jsdom, focusing on DOM (and omitting wider Web APIs).",
   "types": "dist/main.d.ts",
   "main": "dist/main.js",
