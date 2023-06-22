@@ -34,6 +34,7 @@ const config = {
       // parse5: false, // TODO: consider dropping support (it's big)
       psl: false,
       saxes: false,
+      ws: false,
       ...[
         'AbortController.js',
         'AbortSignal.js',
