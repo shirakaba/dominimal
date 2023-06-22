@@ -35,6 +35,8 @@ const config = {
       psl: false,
       saxes: false,
       ...[
+        'AbortController.js',
+        'AbortSignal.js',
         'Headers.js',
         'HTMLAnchorElement.js',
         'HTMLAreaElement.js',
@@ -69,7 +71,6 @@ const config = {
         'HTMLModElement.js',
         'HTMLObjectElement.js',
         'HTMLOListElement.js',
-        // 'HTMLOptionElement.js',
         'HTMLOptionsCollection.js',
         'HTMLOutputElement.js',
         'HTMLParagraphElement.js',
@@ -93,7 +94,6 @@ const config = {
         'HTMLTimeElement.js',
         'HTMLTrackElement.js',
         'HTMLUnknownElement.js',
-        // 'MimeTypeArray.js',
         'RadioNodeList.js',
         'SVGAnimatedString.js',
         'SVGElement.js',
@@ -104,8 +104,10 @@ const config = {
         'SVGTitleElement.js',
         'WebSocket.js',
         'XMLHttpRequest.js', // TODO: use built-in
-        'XMLHttpRequestUpload.js',
         'XMLHttpRequestEventTarget.js',
+        'XMLHttpRequestUpload.js',
+        // 'HTMLOptionElement.js',
+        // 'MimeTypeArray.js',
       ].reduce((acc, file) => {
         acc[getJsdomSubpath(`lib/jsdom/living/generated/${file}`)] =
           path.resolve(__dirname, './lib/jsdom/living/generated/interface.js');
