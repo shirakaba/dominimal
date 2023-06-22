@@ -115,7 +115,9 @@ const config = {
       }, {}),
       // Alias to the same subpath in dominimal
       ...[
+        'lib/jsdom/living/events/Event-impl.js',
         'lib/jsdom/living/fetch/Headers-impl.js',
+        'lib/jsdom/living/generated/Event.js',
         'lib/jsdom/living/generated/HTMLAudioElement.js',
         'lib/jsdom/living/generated/HTMLImageElement.js',
         'lib/jsdom/living/generated/HTMLMediaElement.js',
